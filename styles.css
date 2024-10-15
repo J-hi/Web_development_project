@@ -1,0 +1,1056 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    color: #0D0628;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #0D0628, #ff6f61);
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 60px; /* Replace with appropriate logo size */
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+}
+
+.logo h1 {
+    font-size: 3em;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tagline {
+    margin-top: 15px;
+    font-size: 1.3em;
+    font-style: italic;
+    color: #F5F5F5;
+}
+
+nav {
+    margin-top: 30px;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a:hover {
+    color: #B4E3D8;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/* Image Reset */
+.img {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Action Button */
+.action-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff7f7f;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for button */
+}
+
+/* Pledge Section */
+.pledge-section {
+    position: relative;
+    /* z-index: 2; */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    height: 600px;
+    width: 1000px; /* Fixed width for the pledge section */
+    padding: 110px 50px 110px 50px; /* Add some padding */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeInUp 0.6s forwards; /* Animation effect */
+    animation-delay: 0.3s; /* Delay for the animation */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+
+
+/* Main Container */
+.main-container {
+    display: flex; /* Use flexbox to align slider and pledge section */
+    width: 100%; /* Full width */
+    /* max-width: 1200px; Optional: Max width for larger screens */
+    margin: 0 auto; /* Center the main container */
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    width: 100%; /* Use 70% of the width for the slider */
+    overflow: hidden; /* Hide overflow for sliding effect */
+    height: auto;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes full width */
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    font-size: 20px; /* Increase font size for better visibility */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Count Container */
+.count-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0; /* Space between elements */
+}
+
+.counter {
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.count-box {
+    background-color: #f0f4f8;
+    padding: 20px;
+    font-size: 2rem;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 50px;
+    display: inline-block;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 0.6s forwards;
+}
+
+.count-box:nth-child(1) { animation-delay: 0.4s; } /* Stagger animation */
+.count-box:nth-child(2) { animation-delay: 0.5s; }
+.count-box:nth-child(3) { animation-delay: 0.6s; }
+.count-box:nth-child(4) { animation-delay: 0.7s; }
+.count-box:nth-child(5) { animation-delay: 0.8s; }
+.count-box:nth-child(6) { animation-delay: 0.9s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fade in */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+    
+    .slider-container, .pledge-section {
+        width: 100%; /* Full width for both sections */
+    }
+    
+    .pledge-section {
+        margin-top: 20px; /* Space between sections */
+    }
+}
+
+/* Sections */
+section {
+    text-align: center;
+    margin: 0px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+section p, ul, article {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Interactive Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.zoom-in {
+    transform: scale(0);
+    animation: zoomIn 2s forwards;
+}
+
+.slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 1.5s forwards;
+}
+
+.interactive-section:hover {
+    background-color: #eef6f7;
+    transition: background-color 0.5s;
+}
+
+.register-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #218838;
+}
+
+
+/* Style for the section title */
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Container for the three cards */
+.info-section{
+    padding: 70px 50px;
+
+}
+.info-cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual card styling */
+.info-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the cards */
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Icon styling inside each card */
+.icon-container img {
+    width: 40%;
+    height: 50%;
+    border-radius: 80%; /* Makes the image a circle */
+    object-fit: cover;
+    border: 3px solid #ddd; /* Optional border around the circle */
+    padding: 10px;
+    background-color: #fff; /* Background to mimic the design */
+}
+
+/* Headings inside the cards */
+.info-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Paragraph text inside the cards */
+.info-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .info-card {
+        width: 100%;
+    }
+}
+
+.difference-section {
+    background-image: url('https://example.com/organ-donation-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.difference-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 0;
+}
+
+.difference-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.difference-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: textSlide 2s ease-in-out;
+}
+
+.difference-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    animation: textFadeIn 2.5s ease-in-out;
+}
+
+.donor-button {
+    display: inline-block;
+    background-color: #ff5a5f;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: buttonBounce 3s infinite;
+}
+
+.donor-button:hover {
+    background-color: #ff7075;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textSlide {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes buttonBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Section Wrapper */
+/* Section Wrapper */
+.about-section {
+    background-color: #f7fafc;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.content-header h2 {
+    font-size: 38px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Info Cards Container */
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Card */
+.card {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    transition: transform 0.6s;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Front of the card */
+.card-front {
+    background: #f2f6fc;
+}
+
+.card-front h3 {
+    font-size: 22px;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+.card-front img {
+    width: 64px;
+    height: 64px;
+}
+
+/* Back of the card */
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #9b1d43;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-back p {
+    font-size: 16px;
+}
+
+/* Flip Animation */
+.card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0);
+}
+
+/* Responsive for Smaller Devices */
+@media (max-width: 768px) {
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+.inspiring-stories {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e4dff7;
+    color:#0D0628 ;
+}
+
+.story-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.story-card {
+    background: white;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.story-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.story-image {
+    background-size: cover;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+}
+
+.story-content {
+    padding: 15px;
+    position: relative;
+}
+
+.read-more {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #3b226f;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+/* registration */
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Registration Form Section */
+.registration-form {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #a9082e;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    margin-bottom: 20px;
+    color: #3b226f;
+}
+.form-label{
+    text-align: left;
+    align-content: start;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    flex: 0 0 30%;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group input[type="file"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns for Checkboxes */
+    gap: 15px; /* Spacing between items */
+    margin-top: 15px;
+    padding-left: 120px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-item label {
+    font-size: 16px;
+    color: #333;
+}
+
+.required {
+    color: red;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3b226f;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #a9082e;
+}
+
+/* registration */
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Registration Form Section */
+.registration-form {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #a9082e;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    margin-bottom: 20px;
+    color: #3b226f;
+}
+.form-label{
+    text-align: left;
+    align-content: start;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    flex: 0 0 30%;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group input[type="file"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns for Checkboxes */
+    gap: 15px; /* Spacing between items */
+    margin-top: 15px;
+    padding-left: 120px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-item label {
+    font-size: 16px;
+    color: #333;
+}
+
+.required {
+    color: red;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3b226f;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #f57474;
+}
+
+
+/* footer */
+.footer {
+    background-color: #fc9494d5; /* Dark background */
+    color: rgb(8, 7, 7); /* Text color */
+    padding: 40px 0;
+    text-align: left;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px; /* Minimum width for responsiveness */
+    padding: 20px; /* Added padding for spacing */
+}
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+.footer-section p {
+    margin-bottom: 10px;
+}
+.toggle-button {
+    background-color: #a9082e; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.toggle-button:hover {
+    background-color: #a00a2f; /* Darker on hover */
+}
+.toggle-content {
+    margin-top: 10px;
+    font-size: 0.9em; /* Slightly smaller text */
+}
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+.social-icon {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid white; /* Border around the icons */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.social-icon:hover {
+    background-color: white; /* Change background on hover */
+    color: #226f65; /* Change text color on hover */
+}
+.footer-bottom {
+    background-color: #a9082e; /* Footer bottom background */
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.navigator {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+.term-card {
+    border: 1px solid #3b226f;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #ffffff;
+    transition: transform 0.2s;
+}
+.term-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.term-card h3 {
+    margin: 0 0 10px 0;
+}
+.term-card p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+h3 {
+    margin-bottom: 20px;
+    color: #a9082e;
+}
+.form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.form-section {
+    margin-bottom: 20px;
+}
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; /* Align labels to the left */
+    font-weight: bold;
+}
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="date"],
+.form-section select,
+.form-section input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.checkbox-item {
+    flex: 1 1 45%; /* Responsive sizing */
+}
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+.action-button {
+    background-color: #a9082e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.action-button:hover {
+    background-color: #3b226f;
+}
+.family-member-section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+.add-row, .delete-row {
+    margin-top: 10px;
+}
