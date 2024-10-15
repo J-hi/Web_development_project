@@ -18,7 +18,7 @@
         </nav>
     </header>
 
-    <div id="#home" class="main-container">
+    <div id="home" class="main-container">
         <div class="slider-container">
             <div class="slider">
                 <div class="slide">
@@ -91,14 +91,14 @@
         <div class="difference-content">
             <h2>Make a Difference Today</h2>
             <p>Discover how you can change lives by becoming an organ donor. One act of kindness can give someone the gift of life.</p>
-            <a href="#" class="donor-button">Learn More</a>
+            <a href="medical.html" class="donor-button">Learn More</a>
         </div>
     </section>
 
     
     
     <!-- About Section -->
-    <div id="#about" class="about-section">
+    <div id="about" class="about-section">
         <div class="content-header">
             <h2>About Organ Donation</h2>
             <p class="section-description">Organ donation is a selfless act that can save lives. Here’s what you need to know about the process and how you can get involved.</p>
@@ -142,44 +142,100 @@
     
     
     <!-- Stories Section -->
-    <section id="#stories" class="inspiring-stories">
+    <section id="stories" class="inspiring-stories">
         <h2>Inspiring Stories</h2>
-        <div class="story-container">
-            <div class="story-card" onclick="openModal('johnModal')">
-                <div class="story-image" style="background-image: url('https://www.vitalant.org/getmedia/839f5569-b7a7-4f27-a61c-c9db47f465f2/Donor-1.png?width=758&height=505&ext=.png');"></div>
-                <div class="story-content">
-                    <h3>John's Story</h3>
-                    <p>After receiving a heart transplant, John’s life was transformed.</p>
-                    <button class="read-more">Read More</button>
+        <div class="carousel-container">
+            <button class="carousel-prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="story-container" id="storyCarousel">
+                <!-- John's Story -->
+                <div class="story-card" onclick="openModal('johnModal')">
+                    <div class="story-image" style="background-image: url('https://www.vitalant.org/getmedia/839f5569-b7a7-4f27-a61c-c9db47f465f2/Donor-1.png?width=758&height=505&ext=.png');"></div>
+                    <div class="story-content">
+                        <h3>John's Story</h3>
+                        <p>After receiving a heart transplant, John’s life was transformed.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+    
+                <!-- Mary's Story -->
+                <div class="story-card" onclick="openModal('maryModal')">
+                    <div class="story-image" style="background-image: url(https://img.freepik.com/free-photo/portrait-young-businesswoman-holding-eyeglasses-hand-against-gray-backdrop_23-2148029483.jpg);"></div>
+                    <div class="story-content">
+                        <h3>Mary's Story</h3>
+                        <p>Mary donated her organs, saving three lives.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+    
+                <!-- Ayesha's Story -->
+                <div class="story-card" onclick="openModal('ayeshaModal')">
+                    <div class="story-image" style="background-image: url('https://w.ndtvimg.com/sites/26/2016/11/14122124/Uma-Preman-and-Salil.jpg');background-position:center;"></div>
+                    <div class="story-content">
+                        <h3>Ayesha's Story</h3>
+                        <p>Ayesha's family donated her organs, saving six lives.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+    
+                <!-- David's Story -->
+                <div class="story-card" onclick="openModal('davidModal')">
+                    <div class="story-image" style="background-image: url('https://img.freepik.com/premium-photo/portrait-young-handsome-indian-man-white_251136-79297.jpg');"></div>
+                    <div class="story-content">
+                        <h3>David's Story</h3>
+                        <p>David received a liver transplant after years of waiting.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+    
+                <!-- Chris's Story -->
+                <div class="story-card" onclick="openModal('chrisModal')">
+                    <div class="story-image" style="background-image: url('https://example.com/chris.jpg');"></div>
+                    <div class="story-content">
+                        <h3>Chris's Story</h3>
+                        <p>Chris' family chose to donate his organs, changing multiple lives.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+    
+                <!-- Anna's Story -->
+                <div class="story-card" onclick="openModal('annaModal')">
+                    <div class="story-image" style="background-image: url('https://example.com/anna.jpg');"></div>
+                    <div class="story-content">
+                        <h3>Anna's Story</h3>
+                        <p>Anna's kidney donation brought joy to a family in need.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+    
+                <!-- Raj's Story -->
+                <div class="story-card" onclick="openModal('rajModal')">
+                    <div class="story-image" style="background-image: url('https://example.com/raj.jpg');"></div>
+                    <div class="story-content">
+                        <h3>Raj's Story</h3>
+                        <p>Raj's legacy lives on through the lives he saved.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </div>
+    
+                <!-- Priya's Story -->
+                <div class="story-card" onclick="openModal('priyaModal')">
+                    <div class="story-image" style="background-image: url('https://example.com/priya.jpg');"></div>
+                    <div class="story-content">
+                        <h3>Priya's Story</h3>
+                        <p>Priya's donation of corneas restored sight to two people.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
                 </div>
             </div>
-            <div class="story-card" onclick="openModal('maryModal')">
-                <div class="story-image" style="background-image: url(https://img.freepik.com/free-photo/portrait-young-businesswoman-holding-eyeglasses-hand-against-gray-backdrop_23-2148029483.jpg);"></div>
-                <div class="story-content">
-                    <h3>Mary's Story</h3>
-                    <p>Mary donated her organs, saving three lives.</p>
-                    <button class="read-more">Read More</button>
-                </div>
-            </div>
-            <div class="story-card" onclick="openModal('ayeshaModal')">
-                <div class="story-image" style="background-image: url('https://w.ndtvimg.com/sites/26/2016/11/14122124/Uma-Preman-and-Salil.jpg');background-position:center;"></div>
-                <div class="story-content">
-                    <h3>Ayesha's Story</h3>
-                    <p>Ayesha's family donated her organs, saving six lives.</p>
-                    <button class="read-more">Read More</button>
-                </div>
-            </div>
-
-            <div class="story-card" onclick="openModal('davidModal')">
-                <div class="story-image" style="background-image: url('https://img.freepik.com/premium-photo/portrait-young-handsome-indian-man-white_251136-79297.jpg');"></div>
-                <div class="story-content">
-                    <h3>David's Story</h3>
-                    <p>David received a liver transplant after years of waiting.</p>
-                    <button class="read-more">Read More</button>
-                </div>
-            </div>
+            <button class="carousel-next" onclick="moveCarousel(1)">&#10095;</button>
         </div>
     </section>
+    
+ 
+    
+    
+    
+    <!-- Modals for each story -->
     
     <!-- Modal for John's Story -->
     <div id="johnModal" class="modal">
@@ -198,6 +254,8 @@
             <p>Mary donated her organs, saving three lives. Her legacy inspires countless others to make a difference.</p>
         </div>
     </div>
+    
+    <!-- Modal for Ayesha's Story -->
     <div id="ayeshaModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('ayeshaModal')">&times;</span>
@@ -215,131 +273,168 @@
         </div>
     </div>
     
+    <!-- Modal for Chris's Story -->
+    <div id="chrisModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('chrisModal')">&times;</span>
+            <h3>Chris's Story</h3>
+            <p>Chris' family chose to donate his organs, and it led to life-saving opportunities for multiple people in need.</p>
+        </div>
+    </div>
+    
+    <!-- Modal for Anna's Story -->
+    <div id="annaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('annaModal')">&times;</span>
+            <h3>Anna's Story</h3>
+            <p>Anna donated a kidney to a stranger, bringing hope and happiness to a family struggling with end-stage kidney failure.</p>
+        </div>
+    </div>
+    
+    <!-- Modal for Raj's Story -->
+    <div id="rajModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('rajModal')">&times;</span>
+            <h3>Raj's Story</h3>
+            <p>Raj passed away suddenly, but his organs gave life to five other individuals, ensuring his legacy of kindness continues.</p>
+        </div>
+    </div>
+    
+    <!-- Modal for Priya's Story -->
+    <div id="priyaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('priyaModal')">&times;</span>
+            <h3>Priya's Story</h3>
+            <p>Priya's donation of corneas restored sight to two individuals, giving them the gift of vision.</p>
+        </div>
+    </div>
     
     
     
-    <!-- Register Section
-    <section id="register" class="interactive-section">
-        <h2>Become an Organ Donor</h2>
-        <form id="donor-form" class="fade-in">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
     
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
     
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required min="18">
-    
-            <button type="submit" class="register-btn">Register</button>
-        </form>
-        <p id="confirmation-message"></p>
-    </section> -->
-    <div class="form-container">
+
+    <div id="form" class="form-container">
         <h2 style="text-align: center;">Registration Form</h2><br>
-    <form>
-        <div class="form-section">
-            <h3>Personal Information</h3>
-            <label for="fullName">Full Name <span class="required">*</span></label>
-            <input type="text" id="fullName" name="fullName" required>
+        <form>
+            <div class="form-section">
+                <h3>Personal Information</h3>
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" required>
 
-            <label for="email">Email <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="phone">Phone Number <span class="required">*</span></label>
-            <input type="text" id="phone" name="phone" required>
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="text" id="phone" name="phone" required>
 
-            <label for="dob">Date of Birth <span class="required">*</span></label>
-            <input type="date" id="dob" name="dob" required>
-        </div>
+                <label for="dob">Date of Birth <span class="required">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
 
-        <div class="form-section">
-            <h3>Organ Donation Preferences</h3>
-            <label>Organs/Tissues You Wish to Donate <span class="required">*</span></label>
-            <div class="checkbox-group">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="heart" name="organs" value="heart">
-                    <label for="heart">Heart</label>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="lungs" name="organs" value="lungs">
-                    <label for="lungs">Lungs</label>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="liver" name="organs" value="liver">
-                    <label for="liver">Liver</label>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="kidneys" name="organs" value="kidneys">
-                    <label for="kidneys">Kidneys</label>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="pancreas" name="organs" value="pancreas">
-                    <label for="pancreas">Pancreas</label>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="intestines" name="organs" value="intestines">
-                    <label for="intestines">Intestines</label>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="corneas" name="organs" value="corneas">
-                    <label for="corneas">Corneas</label>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="tissues" name="organs" value="tissues">
-                    <label for="tissues">Tissues</label>
+            <div class="form-section">
+                <h3>Organ Donation Preferences</h3>
+                <label>Organs/Tissues You Wish to Donate <span class="required">*</span></label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="heart" name="organs" value="heart">
+                        <label for="heart">Heart</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lungs" name="organs" value="lungs">
+                        <label for="lungs">Lungs</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="liver" name="organs" value="liver">
+                        <label for="liver">Liver</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="kidneys" name="organs" value="kidneys">
+                        <label for="kidneys">Kidneys</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="pancreas" name="organs" value="pancreas">
+                        <label for="pancreas">Pancreas</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="intestines" name="organs" value="intestines">
+                        <label for="intestines">Intestines</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="corneas" name="organs" value="corneas">
+                        <label for="corneas">Corneas</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="tissues" name="organs" value="tissues">
+                        <label for="tissues">Tissues</label>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-section">
-            <h3>Medical Conditions</h3>
-            <label for="medicalConditions">Please list any medical conditions:</label>
-            <input type="text" id="medicalConditions" name="medicalConditions">
-        </div>
-
-        <div class="form-section">
-            <h3>Identity Proof</h3>
-            <label for="idProof">Upload Identity Proof <span class="required">*</span></label>
-            <input type="file" id="idProof" name="idProof" accept="image/*" required>
-        </div>
-
-        <div class="form-section">
-            <h3>Emergency Contact Details</h3>
-            <label for="emergencyContactPerson">Emergency Contact Person <span class="required">*</span></label>
-            <input type="text" id="emergencyContactPerson" name="emergencyContactPerson" required>
-
-            <label for="emergencyPhone">Emergency Phone <span class="required">*</span></label>
-            <input type="text" id="emergencyPhone" name="emergencyPhone" required>
-
-            <label for="emergencyMobile">Emergency Mobile <span class="required">*</span></label>
-            <input type="text" id="emergencyMobile" name="emergencyMobile" required>
-
-            <label for="emergencyEmail">Emergency Email:</label>
-            <input type="email" id="emergencyEmail" name="emergencyEmail">
-        </div>
-
-        <div class="form-section family-member-section">
-            <h3>Family Member's Details</h3>
-            <div>
-                <label for="familyMemberName">Name <span class="required">*</span></label>
-                <input type="text" id="familyMemberName" name="familyMemberName" required>
-
-                <label for="familyMemberMobile">Mobile <span class="required">*</span></label>
-                <input type="text" id="familyMemberMobile" name="familyMemberMobile" required>
-
-                <label for="relation">Relation <span class="required">*</span></label>
-                <input type="text" id="relation" name="relation" required>
+            <div class="form-section">
+                <h3>Medical Conditions</h3>
+                <label for="medicalConditions">Please list any medical conditions:</label>
+                <input type="text" id="medicalConditions" name="medicalConditions">
             </div>
-            <button type="button" class="add-row">Add Row</button>
-            <button type="button" class="delete-row">Delete Row</button>
-        </div>
 
-        <div class="form-section">
-            <button type="submit" class="action-button">Register</button>
-        </div>
-    </form>
-</div>
+            <div class="form-group">
+                <label for="bloodGroup">Blood Group:</label>
+                <select id="bloodGroup" name="bloodGroup" required>
+                    <option value="">--Select Blood Group--</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+            
+
+            <div class="form-section">
+                <h3>Identity Proof</h3>
+                <label for="idProof">Upload Identity Proof <span class="required">*</span></label>
+                <input type="file" id="idProof" name="idProof" accept="image/*" required>
+            </div>
+
+            <div class="form-section">
+                <h3>Emergency Contact Details</h3>
+                <label for="emergencyContactPerson">Emergency Contact Person <span class="required">*</span></label>
+                <input type="text" id="emergencyContactPerson" name="emergencyContactPerson" required>
+
+                <label for="emergencyPhone">Emergency Phone <span class="required">*</span></label>
+                <input type="text" id="emergencyPhone" name="emergencyPhone" required>
+
+                <label for="emergencyMobile">Emergency Mobile <span class="required">*</span></label>
+                <input type="text" id="emergencyMobile" name="emergencyMobile" required>
+
+                <label for="emergencyEmail">Emergency Email:</label>
+                <input type="email" id="emergencyEmail" name="emergencyEmail">
+            </div>
+
+            <div class="form-section family-member-section">
+                <h3>Family Member's Details</h3>
+                <div>
+                    <label for="familyMemberName">Name <span class="required">*</span></label>
+                    <input type="text" id="familyMemberName" name="familyMemberName" required>
+
+                    <label for="familyMemberMobile">Mobile <span class="required">*</span></label>
+                    <input type="text" id="familyMemberMobile" name="familyMemberMobile" required>
+
+                    <label for="relation">Relation <span class="required">*</span></label>
+                    <input type="text" id="relation" name="relation" required>
+                </div>
+                <button type="button" class="add-row">Add Row</button>
+                <button type="button" class="delete-row">Delete Row</button>
+            </div>
+
+            <div class="form-section">
+                <button type="submit" class="action-button">Register</button>
+            </div>
+        </form>
+    </div>
 
 <footer  class="footer">
     <div class="footer-container">

@@ -305,3 +305,35 @@ function toggleVisibility(id) {
         content.style.display = "none";
     }
 }
+
+
+// carousel
+let currentindex = 0;
+const storiesToShow = 4; // Number of stories to show at a time
+const storyWidth = 320; // Adjust based on your card width + margin
+const storyContainer = document.getElementById('storyCarousel');
+
+function moveCarousel(direction) {
+    const totalStories = document.querySelectorAll('.story-card').length;
+
+    // Update current index based on direction
+    currentindex += direction;
+
+    // Keep the index within bounds
+    if (currentindex < 0) {
+        currentindex = 0;
+    } else if (currentindex > totalStories - storiesToShow) {
+        currentindex = totalStories - storiesToShow;
+    }
+
+    const offset = -currentindex * storyWidth; // Calculate the offset
+    storyContainer.style.transform = `translateX(${offset}px)`; // Apply the offset
+}
+
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}

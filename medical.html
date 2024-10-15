@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulsePoint - Organ Donation Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo3.png" alt="Logo"><br>
+        <p style="color:rgb(255, 199, 199)">Become an Organ Donor, Save Lives</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#stories">Inspiring Stories</a>
+            <a href="#form">Register</a>
+        </nav>
+    </header>
+
+<main>
+    <section class="sec-box">
+        <h2 class="section-title">Medical Information About Organ Donation</h2>
+    
+        <div class="medical-info-box">
+            <section id="medical-info" class="medical-info-section" style="text-align: left;">
+                <div class="info-content">
+                    <div class="info-text">
+                        <h3 style="text-align: left;">What is Organ Donation?</h3>
+                        <p style="text-align: left;">Organ donation is a medical process where an individual's organs are transplanted to another person in need. This life-saving process helps patients with organ failure regain a second chance at life.</p>
+                        <br>
+
+                        <h3 style="text-align: left;">Types of Organ Donation</h3>
+                        <ul>
+                            <li style="text-align: left;"> <strong>Living Donation:</strong> A healthy individual donates an organ while still alive, such as a kidney or part of the liver.</li>
+                            <li style="text-align: left;"> <strong>Deceased Donation:</strong> After death, organs like the heart, lungs, liver, and kidneys can be donated to save lives.</li>
+                        </ul>
+                        <br>
+            
+                        <h3 style="text-align: left;">Eligibility for Donors</h3>
+                        <p style="text-align: left;">Anyone can be a potential organ donor, regardless of age or medical history. Medical professionals assess the suitability of organs after death or from living donors.</p>
+                        
+
+                        <button class="donor-button" onclick="window.location.href='medical.html'">Learn More</button>
+                    </div>
+                    
+                    <div class="info-image">
+                        <img src="https://medicaldialogues.in/h-upload/2020/02/19/750x450_124482-organ-donation.webp" alt="Organ donation illustration" style="margin-top: 50px ;" />
+                    </div>
+                </div>
+            </section>
+            <br>
+            <h3 style="text-align: left;margin-bottom: 0px;">Who Can Donate?</h3>
+            <section class="eligibility-section">
+                <div class="eligibility-content">
+                    <div class="eligibility-text" style="text-align: left;" >
+                        <p>Virtually everyone can register as an organ donor. Age, medical condition, and other factors are considered during the time of donation. Even those with certain medical conditions may be eligible to donate certain organs.</p>
+                        <ul>
+                            <li>People with diabetes can donate corneas and certain tissues.</li>
+                            <li>Cancer survivors may donate organs after remission.</li>
+                        </ul>
+                        <button class="donor-button" onclick="window.location.href='register.html'">Register as a Donor</button>
+                    </div>
+                    
+                    <div class="eligibility-image">
+                        <img src="https://www.sbmf.org/wp-content/uploads/2023/08/20230802_SBM_WhoCanDonateBlood-1080x600.jpg" alt="Eligibility organ donation illustration" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    
+    <!-- CSS for Proper Box Layout and Alignment -->
+    <style>
+        .sec-box {
+            background-color: #f3f4f5;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    
+        .medical-info-box {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            text-align: left;
+        }
+    
+        .info-content, .eligibility-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+    
+        .info-text, .eligibility-text {
+            flex: 1;
+            max-width: 55%;
+            margin: 0px;
+        }
+    
+        .info-image, .eligibility-image {
+            flex: 1;
+            max-width: 40%;
+        }
+    
+        .info-image img, .eligibility-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    
+        .donor-button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .donor-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .info-content, .eligibility-content {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .info-text, .eligibility-text, .info-image, .eligibility-image {
+                max-width: 100%;
+                text-align: left;
+            }
+    
+            .info-image img, .eligibility-image img {
+                height: auto;
+            }
+        }
+
+        .process-section {
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 30px auto;
+        max-width: 1200px;
+    }
+
+    .process-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .process-description {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 40px;
+    }
+
+    .process-steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .process-step {
+        flex: 1;
+        min-width: 260px;
+        max-width: 45%;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .process-step:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .step-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .step-text h3 {
+        margin-top: 20px;
+        font-size: 1.5rem;
+        color: #ff6f61;
+    }
+
+    .step-text p {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 10px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .process-step {
+        animation: fadeInUp 0.8s ease-in-out;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .process-steps {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .process-step {
+            max-width: 100%;
+        }
+    }
+
+    
+    .myths-section {
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+        max-width: 1200px;
+    }
+
+    .myths-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .myths-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .myth-item {
+        flex: 1;
+        min-width: 260px;
+        max-width: 45%;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .myth-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .myth-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .myth-text h3 {
+        margin-top: 20px;
+        font-size: 1.5rem;
+        color: #ff6f61;
+    }
+
+    .myth-text p {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 10px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .myth-item {
+        animation: fadeInUp 0.8s ease-in-out;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .myths-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .myth-item {
+            max-width: 100%;
+        }
+    }
+
+    </style>
+    
+    <!-- Scroll Trigger for Animations -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.medical-info-section, .eligibility-section');
+            const windowHeight = window.innerHeight;
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('show');
+                } else {
+                    section.classList.remove('show');
+                }
+            });
+        });
+    </script>
+    
+    
+
+    <section class="process-section">
+        <h2 class="process-title">The Organ Donation Process</h2>
+        <p class="process-description">The process of organ donation involves several key steps that help save lives:</p>
+        
+        <div class="process-steps">
+            <div class="process-step">
+                <img width="100" height="100" src="https://img.icons8.com/bubbles/100/task.png" alt="task"/>
+                <div class="step-text">
+                    <h3>Step 1: Registration</h3>
+                    <p>Individuals can register to become organ donors online or through their local health services.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <img width="100" height="100" src="https://img.icons8.com/bubbles/100/test-passed.png" alt="test-passed"/>                                   <div class="step-text">
+                    <h3>Step 2: Evaluation</h3>
+                    <p>Medical professionals assess the donor’s health and suitability for donation.</p>
+                </div>
+            </div>
+            
+    
+            <div class="process-step">
+                    <img width="100" height="100" src="https://img.icons8.com/color/48/kidney-transplant.png" alt="kidney-transplant"/>
+                    <div class="step-text">
+                    <h3>Step 3: Matching</h3>
+                    <p>Organs are matched with recipients based on medical criteria and urgency.</p>
+                </div>
+            </div>
+            </div>
+            
+            <div class="process-step">
+                
+                    <img width="64" height="64" src="https://img.icons8.com/cute-clipart/64/organ-transplantation.png" alt="organ-transplantation"/>              
+                <div class="step-text">
+                    <h3>Step 4: Transplantation</h3>
+                    <p>The surgical procedure to remove and transplant organs is conducted in a sterile environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="myths-section">
+        <h2 class="myths-title">Common Myths about Organ Donation</h2>
+        
+        <div class="myths-content">
+            <div class="myth-item">
+                
+                    <img width="100" height="100" src="https://img.icons8.com/plasticine/100/conference-call.png"  alt="Myth - Only certain people can donate" />
+                
+                <div class="myth-text">
+                    <h3><strong>Myth:</strong> Only certain people can be organ donors.</h3>
+                    <p><strong>Fact:</strong> Anyone can register to be an organ donor, regardless of age, race, or medical history.</p>
+                </div>
+            </div>
+            
+            <div class="myth-item">
+                    <img width="100" height="100" src="https://img.icons8.com/color/48/doctor-male-skin-type-2.png" alt="Myth - Doctors won't try to save me" />
+               
+                <div class="myth-text">
+                    <h3><strong>Myth:</strong> If I’m an organ donor, doctors won’t try to save my life.</h3>
+                    <p><strong>Fact:</strong> Medical professionals work to save lives first; organ donation is only considered after all efforts fail.</p>
+                </div>
+            </div>
+            
+            <div class="myth-item">
+                    <img width="100" height="100" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-chest-pain-working-stress-flaticons-lineal-color-flat-icons.png"  alt="Myth - Organ donation is painful" />
+               
+                <div class="myth-text">
+                    <h3><strong>Myth:</strong> Organ donation is painful.</h3>
+                    <p><strong>Fact:</strong> Donors do not feel pain as the donation process occurs after death.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <h2>Benefits of Organ Donation</h2>
+        <ul>
+            <li>Improves or saves the lives of those with organ failure.</li>
+            <li>Offers hope and support to families in need.</li>
+            <li>Promotes awareness and education about organ donation.</li>
+        </ul>
+    </section>
+
+    <section class="resources">
+        <h2>Additional Resources</h2>
+        <p>For more information on organ donation, please visit the following resources:</p>
+        <ul>
+            <li><a href="https://www.organdonor.gov/">Organ Donor Website</a></li>
+            <li><a href="https://www.transplantliving.org/">Transplant Living</a></li>
+            <li><a href="https://www.donatelife.net/">Donate Life</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 PulsePoint. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

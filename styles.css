@@ -1054,3 +1054,50 @@ h3 {
 .add-row, .delete-row {
     margin-top: 10px;
 }
+
+
+/* carousel */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Ensures the carousel takes full width */
+}
+
+.story-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.story-card {
+    min-width: 300px; /* Adjust width as needed */
+    margin: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.carousel-prev, .carousel-next {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1; /* Ensure buttons are above the carousel */
+}
+
+.carousel-prev {
+    position: absolute;
+    left: 0;
+}
+
+.carousel-next {
+    position: absolute;
+    right: 0;
+}
+
+
+/* medical */
