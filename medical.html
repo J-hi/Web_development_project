@@ -8,15 +8,19 @@
 </head>
 <body>
     <header>
-        <img src="logo3.png" alt="Logo"><br>
-        <p style="color:rgb(255, 199, 199)">Become an Organ Donor, Save Lives</p>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#stories">Inspiring Stories</a>
-            <a href="#form">Register</a>
-        </nav>
-    </header>
+        <div class="logo-container">
+            <img src="logo3.png" alt="Logo">
+            <p class="tagline">Become an Organ Donor, Save Lives</p>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#stories">Inspiring Stories</a>
+                <a href="index.html#form">Register</a>
+            </nav>
+        </div>
+        </header>
 
 <main>
     <section class="sec-box">
@@ -335,6 +339,153 @@
         }
     }
 
+    .benefits-section {
+        background-color: #f9f9f9;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .benefits-title {
+        font-size: 2.5rem;
+        color: black;
+        margin-bottom: 30px;
+    }
+
+    .benefits-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .benefit-item {
+        flex: 1;
+        min-width: 250px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .benefit-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .benefit-icon img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .benefit-text h3 {
+        font-size: 1.5rem;
+        color: #ff6f61;
+        margin-bottom: 10px;
+    }
+
+    .benefit-text p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    /* Button Styling */
+    .benefits-button-container {
+        margin-top: 40px;
+    }
+
+    .donor-button {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        color: white;
+        background-color: #007BFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .donor-button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .benefit-item {
+        animation: fadeInUp 0.8s ease-in-out;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .benefits-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .benefit-item {
+            max-width: 100%;
+        }
+    }
+
+    .resources {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.resource-list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 20px;
+}
+
+.resource-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.resource-item:hover {
+    transform: scale(1.1);
+}
+
+.resource-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.resource-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.resource-item a:hover {
+    color: #0056b3;
+}
+
+
     </style>
     
     <!-- Scroll Trigger for Animations -->
@@ -432,24 +583,76 @@
         </div>
     </section>
 
-    <section class="benefits">
-        <h2>Benefits of Organ Donation</h2>
-        <ul>
-            <li>Improves or saves the lives of those with organ failure.</li>
-            <li>Offers hope and support to families in need.</li>
-            <li>Promotes awareness and education about organ donation.</li>
-        </ul>
+    <section class="benefits-section">
+        <h2 class="benefits-title">Benefits of Organ Donation</h2>
+        
+        <div class="benefits-content">
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2983/2983767.png" alt="Life Saving Icon" />
+                </div>
+                <div class="benefit-text">
+                    <h3>Saves Lives</h3>
+                    <p>Organ donation directly improves or saves the lives of individuals with organ failure, giving them a second chance at life.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2921/2921826.png" alt="Support Families Icon" />
+                </div>
+                <div class="benefit-text">
+                    <h3>Offers Hope to Families</h3>
+                    <p>By donating organs, individuals can bring hope and comfort to families in need, knowing their loved ones' organs are giving life to others.</p>
+                </div>
+            </div>
+    
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3037/3037037.png" alt="Awareness Icon" />
+                </div>
+                <div class="benefit-text">
+                    <h3>Promotes Awareness</h3>
+                    <p>Organ donation encourages discussions and education about the importance of this life-saving act, helping to create awareness and support for the cause.</p>
+                </div>
+            </div>
+    
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2907/2907101.png" alt="Gives Legacy Icon" />
+                </div>
+                <div class="benefit-text">
+                    <h3>Gives a Legacy</h3>
+                    <p>Becoming an organ donor allows individuals to leave a lasting legacy, as their organs continue to give life even after they are gone.</p>
+                </div>
+            </div>
+        </div>
+    
+
     </section>
 
     <section class="resources">
         <h2>Additional Resources</h2>
         <p>For more information on organ donation, please visit the following resources:</p>
-        <ul>
-            <li><a href="https://www.organdonor.gov/">Organ Donor Website</a></li>
-            <li><a href="https://www.transplantliving.org/">Transplant Living</a></li>
-            <li><a href="https://www.donatelife.net/">Donate Life</a></li>
-        </ul>
+        
+        <div class="resource-list">
+            <div class="resource-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/3221/3221845.png" alt="Organ Donor" class="resource-icon"/>
+                <a href="https://www.organdonor.gov/" target="_blank">Organ Donor Website</a>
+            </div>
+            
+            <div class="resource-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/3221/3221858.png" alt="Transplant Living" class="resource-icon"/>
+                <a href="https://www.transplantliving.org/" target="_blank">Transplant Living</a>
+            </div>
+            
+            <div class="resource-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/3221/3221864.png" alt="Donate Life" class="resource-icon"/>
+                <a href="https://www.donatelife.net/" target="_blank">Donate Life</a>
+            </div>
+        </div>
     </section>
+    
 </main>
 
 <footer>

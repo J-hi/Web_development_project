@@ -13,88 +13,79 @@ body {
     color: #0D0628;
 }
 
-/* Header Styling */
-header {
-    background: linear-gradient(to right, #0D0628, #ff6f61);
-    padding: 40px 0;
-    color: white;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+
+* {
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+header {
+    position: relative; /* Set position relative to enable sticky navbar */
+}
+
+.logo-container {
+    padding: 20px 220px; /* Added padding for spacing */
+    background: linear-gradient(to right,#0D0628,#ff6f61); /* Logo background color */
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo img {
-    width: 60px; /* Replace with appropriate logo size */
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
-    padding: 10px;
-}
-
-.logo h1 {
-    font-size: 3em;
-    letter-spacing: 1.5px;
-    font-weight: bold;
-    margin: 0;
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 200px; /* Set max width for logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .tagline {
-    margin-top: 15px;
-    font-size: 1.3em;
-    font-style: italic;
-    color: #F5F5F5;
+    color: rgb(255, 199, 199); /* Tagline color */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-container {
+    background-color: #0D0628; /* Navigation background color */
+    padding: 10px 100px 10px 600px; /* Added padding for spacing */
+    position: sticky; /* Makes the navbar sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 
 nav {
-    margin-top: 30px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-start; /* Align links to the left */
 }
 
 nav a {
-    color: white;
-    margin: 0 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    position: relative;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 20px; /* Adjust margin for spacing */
+    padding: 10px 15px; /* Padding around links */
+    position: relative; /* Required for the animated line */
+    text-transform: uppercase; /* Changes text to uppercase */
+    font-size: larger; /* Makes font size larger */
+    font-family: sans-serif; /* Font family */
+    font-weight: 900; /* Makes font bold */
 }
 
-nav a:hover {
-    color: #B4E3D8;
+nav a::after {
+    content: ''; /* Create an empty pseudo-element for the underline */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Start at the center */
+    bottom: 0; /* Align to the bottom of the link */
+    width: 0; /* Initial width */
+    height: 2px; /* Height of the underline */
+    background-color: white; /* Underline color */
+    transition: width 0.3s ease, left 0.3s ease; /* Animation */
 }
 
-nav a::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: white;
-    bottom: -5px;
-    left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
+nav a:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to the left */
 }
 
-nav a:hover::before {
-    width: 100%;
-    left: 0;
+main {
+    margin-top: 20px; /* Space between the header and the main content */
 }
 
 /* Image Reset */
@@ -107,7 +98,7 @@ nav a:hover::before {
 .action-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #ff7f7f;
+    background-color: #ff6f61;
     border: none;
     color: white;
     cursor: pointer;
@@ -383,7 +374,7 @@ section p, ul, article {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background-color:#0D0628 ;/* Dark overlay */
     z-index: 0;
 }
 
@@ -421,7 +412,7 @@ section p, ul, article {
 }
 
 .donor-button:hover {
-    background-color: #ff7075;
+    background-color: #ff6f61;
     transform: scale(1.05);
 }
 
@@ -890,7 +881,7 @@ body {
 
 /* footer */
 .footer {
-    background-color: #fc9494d5; /* Dark background */
+    background-color: #0D0628; /* Dark background */
     color: rgb(8, 7, 7); /* Text color */
     padding: 40px 0;
     text-align: left;
@@ -924,7 +915,7 @@ body {
     transition: background-color 0.3s;
 }
 .toggle-button:hover {
-    background-color: #a00a2f; /* Darker on hover */
+    background-color: #ff6f61; /* Darker on hover */
 }
 .toggle-content {
     margin-top: 10px;
@@ -947,7 +938,7 @@ body {
     color: #226f65; /* Change text color on hover */
 }
 .footer-bottom {
-    background-color: #a9082e; /* Footer bottom background */
+    background-color: #ff6f61; /* Footer bottom background */
     padding: 10px;
     text-align: center;
 }
@@ -1035,7 +1026,7 @@ h3 {
     margin-right: 5px;
 }
 .action-button {
-    background-color: #a9082e;
+    background-color: #ff6f61;
     color: white;
     border: none;
     padding: 10px 15px;
